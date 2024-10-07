@@ -1,30 +1,16 @@
 import { readFile } from 'fs/promises'
 import { Connection, Keypair, VersionedTransaction } from '@solana/web3.js'
-import getJupiterQuote, { JupiterSwapMode } from '@/lib/jupiter/getJupiterQuote'
 import postJupiterSwap from '@/lib/jupiter/postJupiterSwap'
 import 'dotenv/config'
+import type { QuoteResponse } from '@jup-ag/api'
 
 const SOLANA_RPC_URL = process.env.SOLANA_RPC_URL || 'http://localhost:8899'
 const KEY_FILE_PATH =
-  process.env.KEY_FILE_PATH || '/home/solv/mainnet-validator-keypair.json'
+  process.env.KEY_FILE_PATH || '~/mainnet-validator-keypair.json'
 
-const jupiterSwap = async (
-  inputMint: string,
-  outputMint: string,
-  inputAmountLamport: number,
-  platformFeeBps = 0,
-  swapMode = 'ExactIn' as JupiterSwapMode,
-  maxRetries = 3,
-) => {
+const jupiterSwap = async (quoteResponse: QuoteResponse, maxRetries = 3) => {
   try {
     const connection = new Connection(SOLANA_RPC_URL, 'confirmed')
-    const quoteResponse = await getJupiterQuote(
-      inputMint,
-      outputMint,
-      inputAmountLamport,
-      platformFeeBps,
-      swapMode,
-    )
 
     if (typeof quoteResponse === 'string') {
       return quoteResponse

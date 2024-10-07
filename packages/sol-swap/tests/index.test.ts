@@ -1,7 +1,7 @@
 // tests/cli.test.ts
 import { describe, it, expect } from 'vitest'
-import { exec } from 'child_process'
-import util from 'util'
+import { exec } from 'node:child_process'
+import util from 'node:util'
 
 const execPromise = util.promisify(exec)
 

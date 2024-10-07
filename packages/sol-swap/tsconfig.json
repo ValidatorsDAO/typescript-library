@@ -24,6 +24,6 @@
     }
   },
   "compileOnSave": true,
-  "include": ["src/lib", "src/index.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts", "dist", "src/examples"]
+  "include": ["src/lib", "src/**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts", "dist"]
 }
