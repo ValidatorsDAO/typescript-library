@@ -9,6 +9,8 @@ const getQuote = async () => {
   if (typeof quote === 'string') {
     throw new Error(quote)
   }
+  const estimatedAmount = quote.outAmount
+  console.log(`Estimated Amount: ${estimatedAmount}`)
   await jupiterSwap(quote)
 }
 
