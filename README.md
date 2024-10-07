@@ -21,7 +21,9 @@ website: [https://dao.validators.solutions](https://dao.validators.solutions)
 The elSOL staking pool exclusively includes validators with;
 
 ✅ - 0% vote commission
+
 ✅ - 0% Jito MEV commission
+
 ✅ - 0% pool management fee,
 
 thus, elSOL offers higher True APY in long-term staking.
