@@ -1,5 +1,5 @@
 {
-  "name": "@validatorsdao/sol-swap",
+  "name": "@validators-dao/sol-swap",
   "version": "0.1.0",
   "description": "Solana Validator CLI SOLV",
   "main": "dist/index.js",
