@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "ValidatorsDAO/sol-swap" }
+    { "repo": "validators-dao/sol-swap" }
   ],
   "commit": false,
   "fixed": [],
