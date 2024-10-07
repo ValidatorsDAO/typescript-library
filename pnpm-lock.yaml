@@ -63,7 +63,7 @@ importers:
         specifier: 1.95.3
         version: 1.95.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       dotenv:
-        specifier: ^16.4.5
+        specifier: 16.4.5
         version: 16.4.5
     devDependencies:
       '@changesets/changelog-github':
